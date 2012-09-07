@@ -23,6 +23,11 @@
 		4831337715FAA8D6001B8091 /* PertSearchTests.h in Resources */ = {isa = PBXBuildFile; fileRef = 4831337615FAA8D6001B8091 /* PertSearchTests.h */; };
 		4831337915FAA8D6001B8091 /* PertSearchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4831337815FAA8D6001B8091 /* PertSearchTests.m */; };
 		4831338315FAA8EF001B8091 /* PertSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4831338215FAA8EF001B8091 /* PertSearchViewController.xib */; };
+		4831338715FAAB91001B8091 /* Pert.m in Sources */ = {isa = PBXBuildFile; fileRef = 4831338615FAAB91001B8091 /* Pert.m */; };
+		4831338B15FAAC09001B8091 /* PertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4831338915FAAC09001B8091 /* PertViewController.m */; };
+		4831338C15FAAC09001B8091 /* PertViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4831338A15FAAC09001B8091 /* PertViewController.xib */; };
+		4831338E15FAACA5001B8091 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4831338D15FAACA5001B8091 /* libsqlite3.dylib */; };
+		484DEC9415FAACF700CC61B9 /* PertDB.db in Resources */ = {isa = PBXBuildFile; fileRef = 484DEC9315FAACF700CC61B9 /* PertDB.db */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +62,13 @@
 		4831337615FAA8D6001B8091 /* PertSearchTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PertSearchTests.h; sourceTree = "<group>"; };
 		4831337815FAA8D6001B8091 /* PertSearchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PertSearchTests.m; sourceTree = "<group>"; };
 		4831338215FAA8EF001B8091 /* PertSearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PertSearchViewController.xib; sourceTree = "<group>"; };
+		4831338515FAAB91001B8091 /* Pert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pert.h; sourceTree = "<group>"; };
+		4831338615FAAB91001B8091 /* Pert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Pert.m; sourceTree = "<group>"; };
+		4831338815FAAC09001B8091 /* PertViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PertViewController.h; sourceTree = "<group>"; };
+		4831338915FAAC09001B8091 /* PertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PertViewController.m; sourceTree = "<group>"; };
+		4831338A15FAAC09001B8091 /* PertViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PertViewController.xib; sourceTree = "<group>"; };
+		4831338D15FAACA5001B8091 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		484DEC9315FAACF700CC61B9 /* PertDB.db */ = {isa = PBXFileReference; lastKnownFileType = file; name = PertDB.db; path = ../../../../../Desktop/PertDB.db; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +79,7 @@
 				4831334A15FAA8D6001B8091 /* UIKit.framework in Frameworks */,
 				4831334C15FAA8D6001B8091 /* Foundation.framework in Frameworks */,
 				4831334E15FAA8D6001B8091 /* CoreGraphics.framework in Frameworks */,
+				4831338E15FAACA5001B8091 /* libsqlite3.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,6 +118,7 @@
 		4831334815FAA8D6001B8091 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4831338D15FAACA5001B8091 /* libsqlite3.dylib */,
 				4831334915FAA8D6001B8091 /* UIKit.framework */,
 				4831334B15FAA8D6001B8091 /* Foundation.framework */,
 				4831334D15FAA8D6001B8091 /* CoreGraphics.framework */,
@@ -115,6 +129,7 @@
 		4831334F15FAA8D6001B8091 /* PertSearch */ = {
 			isa = PBXGroup;
 			children = (
+				4831338415FAAB23001B8091 /* Classes */,
 				4831335815FAA8D6001B8091 /* PertSearchAppDelegate.h */,
 				4831335915FAA8D6001B8091 /* PertSearchAppDelegate.m */,
 				4831338215FAA8EF001B8091 /* PertSearchViewController.xib */,
@@ -130,6 +145,7 @@
 		4831335015FAA8D6001B8091 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				484DEC9315FAACF700CC61B9 /* PertDB.db */,
 				4831335115FAA8D6001B8091 /* PertSearch-Info.plist */,
 				4831335215FAA8D6001B8091 /* InfoPlist.strings */,
 				4831335515FAA8D6001B8091 /* PertSearch-Prefix.pch */,
@@ -156,6 +172,18 @@
 				4831337515FAA8D6001B8091 /* PertSearchTests-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4831338415FAAB23001B8091 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				4831338515FAAB91001B8091 /* Pert.h */,
+				4831338615FAAB91001B8091 /* Pert.m */,
+				4831338815FAAC09001B8091 /* PertViewController.h */,
+				4831338915FAAC09001B8091 /* PertViewController.m */,
+				4831338A15FAAC09001B8091 /* PertViewController.xib */,
+			);
+			name = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,6 +257,8 @@
 				4831335D15FAA8D6001B8091 /* MainWindow.xib in Resources */,
 				4831336315FAA8D6001B8091 /* RootViewController.xib in Resources */,
 				4831338315FAA8EF001B8091 /* PertSearchViewController.xib in Resources */,
+				4831338C15FAAC09001B8091 /* PertViewController.xib in Resources */,
+				484DEC9415FAACF700CC61B9 /* PertDB.db in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,6 +297,8 @@
 				4831335715FAA8D6001B8091 /* main.m in Sources */,
 				4831335A15FAA8D6001B8091 /* PertSearchAppDelegate.m in Sources */,
 				4831336015FAA8D6001B8091 /* RootViewController.m in Sources */,
+				4831338715FAAB91001B8091 /* Pert.m in Sources */,
+				4831338B15FAAC09001B8091 /* PertViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -447,6 +479,7 @@
 				4831337E15FAA8D6001B8091 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4831337F15FAA8D6001B8091 /* Build configuration list for PBXNativeTarget "PertSearchTests" */ = {
 			isa = XCConfigurationList;
@@ -455,6 +488,7 @@
 				4831338115FAA8D6001B8091 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
