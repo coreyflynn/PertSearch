@@ -1,0 +1,458 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4831334A15FAA8D6001B8091 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4831334915FAA8D6001B8091 /* UIKit.framework */; };
+		4831334C15FAA8D6001B8091 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4831334B15FAA8D6001B8091 /* Foundation.framework */; };
+		4831334E15FAA8D6001B8091 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4831334D15FAA8D6001B8091 /* CoreGraphics.framework */; };
+		4831335415FAA8D6001B8091 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4831335215FAA8D6001B8091 /* InfoPlist.strings */; };
+		4831335715FAA8D6001B8091 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4831335615FAA8D6001B8091 /* main.m */; };
+		4831335A15FAA8D6001B8091 /* PertSearchAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4831335915FAA8D6001B8091 /* PertSearchAppDelegate.m */; };
+		4831335D15FAA8D6001B8091 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4831335B15FAA8D6001B8091 /* MainWindow.xib */; };
+		4831336015FAA8D6001B8091 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4831335F15FAA8D6001B8091 /* RootViewController.m */; };
+		4831336315FAA8D6001B8091 /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4831336115FAA8D6001B8091 /* RootViewController.xib */; };
+		4831336A15FAA8D6001B8091 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4831334915FAA8D6001B8091 /* UIKit.framework */; };
+		4831336B15FAA8D6001B8091 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4831334B15FAA8D6001B8091 /* Foundation.framework */; };
+		4831336C15FAA8D6001B8091 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4831334D15FAA8D6001B8091 /* CoreGraphics.framework */; };
+		4831337415FAA8D6001B8091 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4831337215FAA8D6001B8091 /* InfoPlist.strings */; };
+		4831337715FAA8D6001B8091 /* PertSearchTests.h in Resources */ = {isa = PBXBuildFile; fileRef = 4831337615FAA8D6001B8091 /* PertSearchTests.h */; };
+		4831337915FAA8D6001B8091 /* PertSearchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4831337815FAA8D6001B8091 /* PertSearchTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4831336D15FAA8D6001B8091 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4831333C15FAA8D6001B8091 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4831334415FAA8D6001B8091;
+			remoteInfo = PertSearch;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4831334515FAA8D6001B8091 /* PertSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PertSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4831334915FAA8D6001B8091 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		4831334B15FAA8D6001B8091 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		4831334D15FAA8D6001B8091 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		4831335115FAA8D6001B8091 /* PertSearch-Info.plist */ = {isa = PBXFileReference; path = "PertSearch-Info.plist"; sourceTree = "<group>"; };
+		4831335315FAA8D6001B8091 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		4831335515FAA8D6001B8091 /* PertSearch-Prefix.pch */ = {isa = PBXFileReference; path = "PertSearch-Prefix.pch"; sourceTree = "<group>"; };
+		4831335615FAA8D6001B8091 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4831335815FAA8D6001B8091 /* PertSearchAppDelegate.h */ = {isa = PBXFileReference; path = PertSearchAppDelegate.h; sourceTree = "<group>"; };
+		4831335915FAA8D6001B8091 /* PertSearchAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PertSearchAppDelegate.m; sourceTree = "<group>"; };
+		4831335C15FAA8D6001B8091 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		4831335E15FAA8D6001B8091 /* RootViewController.h */ = {isa = PBXFileReference; path = RootViewController.h; sourceTree = "<group>"; };
+		4831335F15FAA8D6001B8091 /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		4831336215FAA8D6001B8091 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/RootViewController.xib; sourceTree = "<group>"; };
+		4831336915FAA8D6001B8091 /* PertSearchTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PertSearchTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4831337115FAA8D6001B8091 /* PertSearchTests-Info.plist */ = {isa = PBXFileReference; path = "PertSearchTests-Info.plist"; sourceTree = "<group>"; };
+		4831337315FAA8D6001B8091 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		4831337515FAA8D6001B8091 /* PertSearchTests-Prefix.pch */ = {isa = PBXFileReference; path = "PertSearchTests-Prefix.pch"; sourceTree = "<group>"; };
+		4831337615FAA8D6001B8091 /* PertSearchTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PertSearchTests.h; sourceTree = "<group>"; };
+		4831337815FAA8D6001B8091 /* PertSearchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PertSearchTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4831334215FAA8D6001B8091 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4831334A15FAA8D6001B8091 /* UIKit.framework in Frameworks */,
+				4831334C15FAA8D6001B8091 /* Foundation.framework in Frameworks */,
+				4831334E15FAA8D6001B8091 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4831336515FAA8D6001B8091 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4831336A15FAA8D6001B8091 /* UIKit.framework in Frameworks */,
+				4831336B15FAA8D6001B8091 /* Foundation.framework in Frameworks */,
+				4831336C15FAA8D6001B8091 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4831333A15FAA8D6001B8091 = {
+			isa = PBXGroup;
+			children = (
+				4831334F15FAA8D6001B8091 /* PertSearch */,
+				4831336F15FAA8D6001B8091 /* PertSearchTests */,
+				4831334815FAA8D6001B8091 /* Frameworks */,
+				4831334615FAA8D6001B8091 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4831334615FAA8D6001B8091 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4831334515FAA8D6001B8091 /* PertSearch.app */,
+				4831336915FAA8D6001B8091 /* PertSearchTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4831334815FAA8D6001B8091 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4831334915FAA8D6001B8091 /* UIKit.framework */,
+				4831334B15FAA8D6001B8091 /* Foundation.framework */,
+				4831334D15FAA8D6001B8091 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4831334F15FAA8D6001B8091 /* PertSearch */ = {
+			isa = PBXGroup;
+			children = (
+				4831335815FAA8D6001B8091 /* PertSearchAppDelegate.h */,
+				4831335915FAA8D6001B8091 /* PertSearchAppDelegate.m */,
+				4831335B15FAA8D6001B8091 /* MainWindow.xib */,
+				4831335E15FAA8D6001B8091 /* RootViewController.h */,
+				4831335F15FAA8D6001B8091 /* RootViewController.m */,
+				4831336115FAA8D6001B8091 /* RootViewController.xib */,
+				4831335015FAA8D6001B8091 /* Supporting Files */,
+			);
+			path = PertSearch;
+			sourceTree = "<group>";
+		};
+		4831335015FAA8D6001B8091 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4831335115FAA8D6001B8091 /* PertSearch-Info.plist */,
+				4831335215FAA8D6001B8091 /* InfoPlist.strings */,
+				4831335515FAA8D6001B8091 /* PertSearch-Prefix.pch */,
+				4831335615FAA8D6001B8091 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4831336F15FAA8D6001B8091 /* PertSearchTests */ = {
+			isa = PBXGroup;
+			children = (
+				4831337615FAA8D6001B8091 /* PertSearchTests.h */,
+				4831337815FAA8D6001B8091 /* PertSearchTests.m */,
+				4831337015FAA8D6001B8091 /* Supporting Files */,
+			);
+			path = PertSearchTests;
+			sourceTree = "<group>";
+		};
+		4831337015FAA8D6001B8091 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4831337115FAA8D6001B8091 /* PertSearchTests-Info.plist */,
+				4831337215FAA8D6001B8091 /* InfoPlist.strings */,
+				4831337515FAA8D6001B8091 /* PertSearchTests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4831334415FAA8D6001B8091 /* PertSearch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4831337C15FAA8D6001B8091 /* Build configuration list for PBXNativeTarget "PertSearch" */;
+			buildPhases = (
+				4831334115FAA8D6001B8091 /* Sources */,
+				4831334215FAA8D6001B8091 /* Frameworks */,
+				4831334315FAA8D6001B8091 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PertSearch;
+			productName = PertSearch;
+			productReference = 4831334515FAA8D6001B8091 /* PertSearch.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4831336815FAA8D6001B8091 /* PertSearchTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4831337F15FAA8D6001B8091 /* Build configuration list for PBXNativeTarget "PertSearchTests" */;
+			buildPhases = (
+				4831336415FAA8D6001B8091 /* Sources */,
+				4831336515FAA8D6001B8091 /* Frameworks */,
+				4831336615FAA8D6001B8091 /* Resources */,
+				4831336715FAA8D6001B8091 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4831336E15FAA8D6001B8091 /* PBXTargetDependency */,
+			);
+			name = PertSearchTests;
+			productName = PertSearchTests;
+			productReference = 4831336915FAA8D6001B8091 /* PertSearchTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4831333C15FAA8D6001B8091 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 4831333F15FAA8D6001B8091 /* Build configuration list for PBXProject "PertSearch" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 4831333A15FAA8D6001B8091;
+			productRefGroup = 4831334615FAA8D6001B8091 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4831334415FAA8D6001B8091 /* PertSearch */,
+				4831336815FAA8D6001B8091 /* PertSearchTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4831334315FAA8D6001B8091 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4831335415FAA8D6001B8091 /* InfoPlist.strings in Resources */,
+				4831335D15FAA8D6001B8091 /* MainWindow.xib in Resources */,
+				4831336315FAA8D6001B8091 /* RootViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4831336615FAA8D6001B8091 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4831337415FAA8D6001B8091 /* InfoPlist.strings in Resources */,
+				4831337715FAA8D6001B8091 /* PertSearchTests.h in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4831336715FAA8D6001B8091 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4831334115FAA8D6001B8091 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4831335715FAA8D6001B8091 /* main.m in Sources */,
+				4831335A15FAA8D6001B8091 /* PertSearchAppDelegate.m in Sources */,
+				4831336015FAA8D6001B8091 /* RootViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4831336415FAA8D6001B8091 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4831337915FAA8D6001B8091 /* PertSearchTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4831336E15FAA8D6001B8091 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4831334415FAA8D6001B8091 /* PertSearch */;
+			targetProxy = 4831336D15FAA8D6001B8091 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4831335215FAA8D6001B8091 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4831335315FAA8D6001B8091 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		4831335B15FAA8D6001B8091 /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4831335C15FAA8D6001B8091 /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+		4831336115FAA8D6001B8091 /* RootViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4831336215FAA8D6001B8091 /* en */,
+			);
+			name = RootViewController.xib;
+			sourceTree = "<group>";
+		};
+		4831337215FAA8D6001B8091 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4831337315FAA8D6001B8091 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4831337A15FAA8D6001B8091 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		4831337B15FAA8D6001B8091 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+		4831337D15FAA8D6001B8091 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PertSearch/PertSearch-Prefix.pch";
+				INFOPLIST_FILE = "PertSearch/PertSearch-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		4831337E15FAA8D6001B8091 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PertSearch/PertSearch-Prefix.pch";
+				INFOPLIST_FILE = "PertSearch/PertSearch-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		4831338015FAA8D6001B8091 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/PertSearch.app/PertSearch";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PertSearchTests/PertSearchTests-Prefix.pch";
+				INFOPLIST_FILE = "PertSearchTests/PertSearchTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					SenTestingKit,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		4831338115FAA8D6001B8091 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/PertSearch.app/PertSearch";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PertSearchTests/PertSearchTests-Prefix.pch";
+				INFOPLIST_FILE = "PertSearchTests/PertSearchTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					SenTestingKit,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4831333F15FAA8D6001B8091 /* Build configuration list for PBXProject "PertSearch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4831337A15FAA8D6001B8091 /* Debug */,
+				4831337B15FAA8D6001B8091 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4831337C15FAA8D6001B8091 /* Build configuration list for PBXNativeTarget "PertSearch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4831337D15FAA8D6001B8091 /* Debug */,
+				4831337E15FAA8D6001B8091 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		4831337F15FAA8D6001B8091 /* Build configuration list for PBXNativeTarget "PertSearchTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4831338015FAA8D6001B8091 /* Debug */,
+				4831338115FAA8D6001B8091 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4831333C15FAA8D6001B8091 /* Project object */;
+}
