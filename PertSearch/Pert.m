@@ -10,5 +10,13 @@
 
 
 @implementation Pert
+@synthesize pert_id,pert_desc;
+
+-(id)initWithPertId:(NSString *)pid pert_desc:(NSString *)desc{
+    self.pert_id = pid;
+    self.pert_desc = desc;
+    
+    return self;
+}
 
 @end
