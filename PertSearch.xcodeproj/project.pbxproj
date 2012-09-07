@@ -22,6 +22,7 @@
 		4831337415FAA8D6001B8091 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4831337215FAA8D6001B8091 /* InfoPlist.strings */; };
 		4831337715FAA8D6001B8091 /* PertSearchTests.h in Resources */ = {isa = PBXBuildFile; fileRef = 4831337615FAA8D6001B8091 /* PertSearchTests.h */; };
 		4831337915FAA8D6001B8091 /* PertSearchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4831337815FAA8D6001B8091 /* PertSearchTests.m */; };
+		4831338315FAA8EF001B8091 /* PertSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4831338215FAA8EF001B8091 /* PertSearchViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,22 +40,23 @@
 		4831334915FAA8D6001B8091 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		4831334B15FAA8D6001B8091 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		4831334D15FAA8D6001B8091 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		4831335115FAA8D6001B8091 /* PertSearch-Info.plist */ = {isa = PBXFileReference; path = "PertSearch-Info.plist"; sourceTree = "<group>"; };
+		4831335115FAA8D6001B8091 /* PertSearch-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PertSearch-Info.plist"; sourceTree = "<group>"; };
 		4831335315FAA8D6001B8091 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		4831335515FAA8D6001B8091 /* PertSearch-Prefix.pch */ = {isa = PBXFileReference; path = "PertSearch-Prefix.pch"; sourceTree = "<group>"; };
+		4831335515FAA8D6001B8091 /* PertSearch-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PertSearch-Prefix.pch"; sourceTree = "<group>"; };
 		4831335615FAA8D6001B8091 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		4831335815FAA8D6001B8091 /* PertSearchAppDelegate.h */ = {isa = PBXFileReference; path = PertSearchAppDelegate.h; sourceTree = "<group>"; };
+		4831335815FAA8D6001B8091 /* PertSearchAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PertSearchAppDelegate.h; sourceTree = "<group>"; };
 		4831335915FAA8D6001B8091 /* PertSearchAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PertSearchAppDelegate.m; sourceTree = "<group>"; };
 		4831335C15FAA8D6001B8091 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
-		4831335E15FAA8D6001B8091 /* RootViewController.h */ = {isa = PBXFileReference; path = RootViewController.h; sourceTree = "<group>"; };
+		4831335E15FAA8D6001B8091 /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		4831335F15FAA8D6001B8091 /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		4831336215FAA8D6001B8091 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/RootViewController.xib; sourceTree = "<group>"; };
 		4831336915FAA8D6001B8091 /* PertSearchTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PertSearchTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
-		4831337115FAA8D6001B8091 /* PertSearchTests-Info.plist */ = {isa = PBXFileReference; path = "PertSearchTests-Info.plist"; sourceTree = "<group>"; };
+		4831337115FAA8D6001B8091 /* PertSearchTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PertSearchTests-Info.plist"; sourceTree = "<group>"; };
 		4831337315FAA8D6001B8091 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		4831337515FAA8D6001B8091 /* PertSearchTests-Prefix.pch */ = {isa = PBXFileReference; path = "PertSearchTests-Prefix.pch"; sourceTree = "<group>"; };
+		4831337515FAA8D6001B8091 /* PertSearchTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PertSearchTests-Prefix.pch"; sourceTree = "<group>"; };
 		4831337615FAA8D6001B8091 /* PertSearchTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PertSearchTests.h; sourceTree = "<group>"; };
 		4831337815FAA8D6001B8091 /* PertSearchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PertSearchTests.m; sourceTree = "<group>"; };
+		4831338215FAA8EF001B8091 /* PertSearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PertSearchViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 			children = (
 				4831335815FAA8D6001B8091 /* PertSearchAppDelegate.h */,
 				4831335915FAA8D6001B8091 /* PertSearchAppDelegate.m */,
+				4831338215FAA8EF001B8091 /* PertSearchViewController.xib */,
 				4831335B15FAA8D6001B8091 /* MainWindow.xib */,
 				4831335E15FAA8D6001B8091 /* RootViewController.h */,
 				4831335F15FAA8D6001B8091 /* RootViewController.m */,
@@ -225,6 +228,7 @@
 				4831335415FAA8D6001B8091 /* InfoPlist.strings in Resources */,
 				4831335D15FAA8D6001B8091 /* MainWindow.xib in Resources */,
 				4831336315FAA8D6001B8091 /* RootViewController.xib in Resources */,
+				4831338315FAA8EF001B8091 /* PertSearchViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
