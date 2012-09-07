@@ -7,6 +7,8 @@
 //
 
 #import "PertSearchAppDelegate.h"
+#import "RootViewController.h"
+#import "Pert.h"
 
 @implementation PertSearchAppDelegate
 
@@ -15,13 +17,29 @@
 
 @synthesize navigationController=_navigationController;
 
+@synthesize perts;
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
     // Add the navigation controller's view to the window and display.
+    
+    //setup some globals
+    databaseName = @"PertDB.db";
+    
+    //get the path to the documents directory and append the databaseName
+    NSArray *documentPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDir = [documentPaths objectAtIndex:0];
+    databasePath = [documentsDir stringByAppendingPathComponent:databaseName];
+    
+    //execute the checkAndCreateDatabase function
+    [self checkAndCreateDatabse];
+    
     self.window.rootViewController = self.navigationController;
     [self.window makeKeyAndVisible];
     return YES;
+    
+    
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application
@@ -68,6 +86,33 @@
     [_window release];
     [_navigationController release];
     [super dealloc];
+}
+
+-(void) checkAndCreateDatabase{
+    //check to see if the sql database has already been saved to teh users phone. if not, bopy it over
+    BOOL success;
+    
+    //Create a FileManager object, we will use this to check the status of the database and to copy it over if required
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    
+    //check to see if the database has already been created in the user's file system
+    success = [fileManager fileExistsAtPath:databasePath];
+    
+    // if the file already exists, do nothing
+    if (success) {
+      return;
+    }
+    
+    //if not, proceed and copy the database from the application to the user's filesystem
+    
+    //get the path to the database in the application package
+    NSString *databasePathFromApp = [[[NSBundle mainBundle] resourcePath
+    ] stringByAppendingPathComponent:databasePath];
+    
+    //copy the database from the package to the users filesystem
+    [fileManager copyItemAtPath:databasePathFromApp toPath:databasePath error:nil];
+    
+    [fileManager release];
 }
 
 @end
