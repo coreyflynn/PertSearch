@@ -115,4 +115,36 @@
     [fileManager release];
 }
 
+-(void) readPertsFromDatabase{
+    //setup the database object
+    sqlite3 *database;
+    
+    //init the perts array
+    perts = [[NSMutableArray alloc] init];
+    
+    //open the database from the users filesystem
+    if (sqlite3_open([databasePath UTF8String], &database) == SQLITE_OK) {
+      //setup the sqlite statement and compile if for faster access
+      const char *sqlStatment = "select * from pertdb";
+      sqlite3_stmt *compiledStatement;
+      if (sqlite3_prepare_v2(database, sqlStatment, -1, &compiledStatement, NULL) == SQLITE_OK) {
+          //loop through the results and add them to the feeds array
+          while (sqlite3_step(compiledStatement) == SQLITE_ROW) {
+              //read the data from the result row
+              NSString *aPertID = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 1)];
+              NSString *aPertDesc = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 2)];
+              
+              //creata a new Pert object for the row data
+              Pert *pert = [[Pert alloc] initWithPertId:aPertID pert_desc:aPertDesc];
+              
+              //add the pert object to the perts array
+              [perts addObject:pert];
+              
+            }
+        }
+    //release the compiled statement from memory
+    sqlite3_finalize(compiledStatement);
+    }
+}
+
 @end
