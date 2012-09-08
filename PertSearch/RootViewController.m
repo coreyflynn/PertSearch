@@ -7,6 +7,8 @@
 //
 
 #import "RootViewController.h"
+#import "PertSearchAppDelegate.h"
+#import "Pert.h"
 
 @implementation RootViewController
 
@@ -51,7 +53,8 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 0;
+    PertSearchAppDelegate *appDelegate = (PertSearchAppDelegate *) [[UIApplication sharedApplication] delegate];
+    return appDelegate.perts.count;
 }
 
 // Customize the appearance of table view cells.
@@ -65,6 +68,9 @@
     }
 
     // Configure the cell.
+    PertSearchAppDelegate *appDelegate = (PertSearchAppDelegate *) [[UIApplication sharedApplication] delegate];
+    Pert *pert = (Pert *)[appDelegate.perts objectAtIndex:indexPath.row];
+    [cell.textLabel setText:pert.pert_id];
     return cell;
 }
 

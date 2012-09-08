@@ -32,8 +32,11 @@
     NSString *documentsDir = [documentPaths objectAtIndex:0];
     databasePath = [documentsDir stringByAppendingPathComponent:databaseName];
     
-    //execute the checkAndCreateDatabase function
-    [self checkAndCreateDatabse];
+    //build the database from the application bundle if required 
+    [self checkAndCreateDatabase];
+    
+    //query the database for all pert records and construct the perts array
+    [self readPertsFromDatabase];
     
     self.window.rootViewController = self.navigationController;
     [self.window makeKeyAndVisible];
@@ -88,7 +91,7 @@
     [super dealloc];
 }
 
--(void) checkAndCreateDatabase{
+-(void)checkAndCreateDatabase{
     //check to see if the sql database has already been saved to teh users phone. if not, bopy it over
     BOOL success;
     
@@ -107,7 +110,7 @@
     
     //get the path to the database in the application package
     NSString *databasePathFromApp = [[[NSBundle mainBundle] resourcePath
-    ] stringByAppendingPathComponent:databasePath];
+    ] stringByAppendingPathComponent:databaseName];
     
     //copy the database from the package to the users filesystem
     [fileManager copyItemAtPath:databasePathFromApp toPath:databasePath error:nil];
@@ -115,7 +118,7 @@
     [fileManager release];
 }
 
--(void) readPertsFromDatabase{
+-(void)readPertsFromDatabase{
     //setup the database object
     sqlite3 *database;
     
@@ -125,10 +128,11 @@
     //open the database from the users filesystem
     if (sqlite3_open([databasePath UTF8String], &database) == SQLITE_OK) {
       //setup the sqlite statement and compile if for faster access
+      NSLog(@"opened db");
       const char *sqlStatment = "select * from pertdb";
       sqlite3_stmt *compiledStatement;
       if (sqlite3_prepare_v2(database, sqlStatment, -1, &compiledStatement, NULL) == SQLITE_OK) {
-          //loop through the results and add them to the feeds array
+          //loop through the results and add them to the feeds array    
           while (sqlite3_step(compiledStatement) == SQLITE_ROW) {
               //read the data from the result row
               NSString *aPertID = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 1)];

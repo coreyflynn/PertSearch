@@ -27,4 +27,7 @@
 @property (nonatomic, retain) IBOutlet UINavigationController *navigationController;
 @property (nonatomic, retain) NSMutableArray *perts;
 
+-(void)readPertsFromDatabase;
+-(void)checkAndCreateDatabase;
+
 @end

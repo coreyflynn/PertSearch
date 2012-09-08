@@ -10,7 +10,12 @@
 
 
 @interface PertViewController : UIViewController {
+    IBOutlet UITextView *pertIdentifier;
+    IBOutlet UITextView *pertDescription;
     
 }
+
+@property (nonatomic, retain) IBOutlet UITextView *pertIdentifier;
+@property (nonatomic, retain) IBOutlet UITextView *pertDescription;
 
 @end

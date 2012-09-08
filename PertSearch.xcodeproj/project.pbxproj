@@ -27,7 +27,7 @@
 		4831338B15FAAC09001B8091 /* PertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4831338915FAAC09001B8091 /* PertViewController.m */; };
 		4831338C15FAAC09001B8091 /* PertViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4831338A15FAAC09001B8091 /* PertViewController.xib */; };
 		4831338E15FAACA5001B8091 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4831338D15FAACA5001B8091 /* libsqlite3.dylib */; };
-		484DEC9415FAACF700CC61B9 /* PertDB.db in Resources */ = {isa = PBXBuildFile; fileRef = 484DEC9315FAACF700CC61B9 /* PertDB.db */; };
+		484DEC9715FACAF800CC61B9 /* PertDB.db in Resources */ = {isa = PBXBuildFile; fileRef = 484DEC9615FACAF800CC61B9 /* PertDB.db */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,7 +68,7 @@
 		4831338915FAAC09001B8091 /* PertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PertViewController.m; sourceTree = "<group>"; };
 		4831338A15FAAC09001B8091 /* PertViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PertViewController.xib; sourceTree = "<group>"; };
 		4831338D15FAACA5001B8091 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
-		484DEC9315FAACF700CC61B9 /* PertDB.db */ = {isa = PBXFileReference; lastKnownFileType = file; name = PertDB.db; path = ../../../../../Desktop/PertDB.db; sourceTree = "<group>"; };
+		484DEC9615FACAF800CC61B9 /* PertDB.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = PertDB.db; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,7 +145,7 @@
 		4831335015FAA8D6001B8091 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				484DEC9315FAACF700CC61B9 /* PertDB.db */,
+				484DEC9615FACAF800CC61B9 /* PertDB.db */,
 				4831335115FAA8D6001B8091 /* PertSearch-Info.plist */,
 				4831335215FAA8D6001B8091 /* InfoPlist.strings */,
 				4831335515FAA8D6001B8091 /* PertSearch-Prefix.pch */,
@@ -258,7 +258,7 @@
 				4831336315FAA8D6001B8091 /* RootViewController.xib in Resources */,
 				4831338315FAA8EF001B8091 /* PertSearchViewController.xib in Resources */,
 				4831338C15FAAC09001B8091 /* PertViewController.xib in Resources */,
-				484DEC9415FAACF700CC61B9 /* PertDB.db in Resources */,
+				484DEC9715FACAF800CC61B9 /* PertDB.db in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
