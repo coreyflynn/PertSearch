@@ -12,9 +12,12 @@
 
 @implementation RootViewController
 
+@synthesize pertView;
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.title = @"CMap Perturbagens";
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -117,13 +120,25 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    /*
-    <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-    // ...
-    // Pass the selected object to the new view controller.
-    [self.navigationController pushViewController:detailViewController animated:YES];
-    [detailViewController release];
-	*/
+    //navigation logic create and push a new view controller
+    PertSearchAppDelegate *appDelegate = (PertSearchAppDelegate *)[[UIApplication sharedApplication] delegate];
+    Pert *pert = (Pert *)[appDelegate.perts objectAtIndex:indexPath.row];
+    
+    if (self.pertView == nil) {
+      PertViewController *viewController = [[PertViewController alloc] initWithNibName:@"PertViewController" bundle:nil];
+      self.pertView = viewController;
+      [viewController release];
+    }
+    
+    //setup the animation
+    [self.navigationController pushViewController:self.pertView animated:YES];
+    //set title of the view to the pert_id
+    self.pertView.title = [pert pert_id];
+    //set the pertIdentifier field
+    [self.pertView.pertIdentifier setText:[pert pert_id]];
+    //set the pertDescription field
+    [self.pertView.pertDescription setText:[pert pert_desc]];
+
 }
 
 - (void)didReceiveMemoryWarning

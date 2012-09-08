@@ -7,10 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PertViewController.h"
 
 @interface RootViewController : UITableViewController {
+    PertViewController *pertView;
 
 }
 
+@property(nonatomic,retain) PertViewController *pertView;
 
 @end
