@@ -16,4 +16,7 @@
 
 @property(nonatomic,retain) PertViewController *pertView;
 
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar;
+- (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar;
+
 @end

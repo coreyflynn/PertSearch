@@ -40,13 +40,23 @@
 	[super viewDidDisappear:animated];
 }
 
-/*
+
  // Override to allow orientations other than the default portrait orientation.
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
 	// Return YES for supported orientations.
-	return (interfaceOrientation == UIInterfaceOrientationPortrait);
+    if (interfaceOrientation == UIInterfaceOrientationPortrait) {
+        return YES;
+    } else if (interfaceOrientation == UIInterfaceOrientationLandscapeLeft) {
+        return YES;
+    } else if (interfaceOrientation == UIInterfaceOrientationLandscapeRight) {
+        return YES;
+    } else if (interfaceOrientation == UIInterfaceOrientationPortraitUpsideDown) {
+        return YES;
+    } else {
+        return NO;
+    }
 }
- */
+
 
 // Customize the number of sections in the table view.
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -140,6 +150,17 @@
     [self.pertView.pertDescription setText:[pert pert_desc]];
 
 }
+
+
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar{
+    [searchBar resignFirstResponder];
+}
+
+- (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar{
+    NSLog(@"cancel click");
+    [searchBar resignFirstResponder];
+}
+
 
 - (void)didReceiveMemoryWarning
 {
