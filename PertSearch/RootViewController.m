@@ -158,13 +158,12 @@
 }
 
 
-- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar{
+- (void)searchBarSearchButtonClicked:(UISearchBar *)theSearchBar{
     [self searchTableView:searchBar];
     [searchBar resignFirstResponder];
 }
 
-- (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar{
-    [self searchTableView:searchBar];
+- (void)searchBarCancelButtonClicked:(UISearchBar *)theSearchBar{
     [searchBar resignFirstResponder];
 }
 
@@ -173,6 +172,11 @@
     searching = YES;
     letUserSelectRow = NO;
     self.tableView.scrollEnabled = NO;
+    
+    //Add the done button.
+    self.navigationItem.rightBarButtonItem = [[[UIBarButtonItem alloc]
+    initWithBarButtonSystemItem:UIBarButtonSystemItemDone
+    target:self action:@selector(doneSearching_Clicked:)] autorelease];
 
 }
 
@@ -208,7 +212,7 @@ if(letUserSelectRow){
 
 }
 
-- (void) searchTableView :(UISearchBar *)searchBar{
+- (void) searchTableView :(UISearchBar *)theSearchBar{
     //remove objects from orignialPerts
     PertSearchAppDelegate *appDelegate = (PertSearchAppDelegate *)[[UIApplication sharedApplication] delegate];
     [appDelegate.perts removeAllObjects];
@@ -227,6 +231,16 @@ if(letUserSelectRow){
 }
 
 - (void) doneSearching_Clicked:(id)sender{
+ 
+    searchBar.text = @"";
+    [searchBar resignFirstResponder];
+     
+    letUserSelectRow = YES;
+    searching = NO;
+    self.navigationItem.rightBarButtonItem = nil;
+    self.tableView.scrollEnabled = YES;
+     
+    [self.tableView reloadData];
 }
 
 - (void)didReceiveMemoryWarning

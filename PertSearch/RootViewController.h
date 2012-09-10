@@ -12,6 +12,7 @@
 @interface RootViewController : UITableViewController {
     PertViewController *pertView;
     NSMutableArray *filteredPerts;
+    IBOutlet UISearchBar *searchBar;
     BOOL searching;
     BOOL letUserSelectRow;
 
