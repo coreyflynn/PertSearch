@@ -19,6 +19,7 @@
     
     //Array to store the Pert objects
     NSMutableArray *perts;
+    NSMutableArray *originalPerts;
 
 }
 
@@ -26,6 +27,7 @@
 
 @property (nonatomic, retain) IBOutlet UINavigationController *navigationController;
 @property (nonatomic, retain) NSMutableArray *perts;
+@property (nonatomic, retain) NSMutableArray *originalPerts;
 
 -(void)readPertsFromDatabase;
 -(void)checkAndCreateDatabase;

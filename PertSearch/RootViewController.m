@@ -14,10 +14,16 @@
 
 @synthesize pertView;
 
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     self.title = @"CMap Perturbagens";
+    
+    //searching variables
+    letUserSelectRow = YES;
+    searching = NO;
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -153,14 +159,75 @@
 
 
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar{
+    [self searchTableView:searchBar];
     [searchBar resignFirstResponder];
 }
 
 - (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar{
-    NSLog(@"cancel click");
+    [self searchTableView:searchBar];
     [searchBar resignFirstResponder];
 }
 
+- (void) searchBarTextDidBeginEditing:(UISearchBar *)theSearchBar {
+ 
+    searching = YES;
+    letUserSelectRow = NO;
+    self.tableView.scrollEnabled = NO;
+
+}
+
+- (void)searchBar:(UISearchBar *)theSearchBar textDidChange:(NSString *)searchText{
+    PertSearchAppDelegate *appDelegate = (PertSearchAppDelegate *)[[UIApplication sharedApplication] delegate];
+    
+    //if the search box has text, filter the data by calling searchTableView, otherwise show the full list
+    if ([searchText length] > 0) {
+       searching = YES;
+       letUserSelectRow = YES;
+       self.tableView.scrollEnabled = YES;
+       [self searchTableView:theSearchBar];
+    }else{
+       searching = NO;
+       letUserSelectRow = NO;
+       self.tableView.scrollEnabled = NO;
+       [appDelegate.perts removeAllObjects];
+       [appDelegate.perts addObjectsFromArray:appDelegate.originalPerts];
+    }
+    
+    //reload the tableView data
+    [self.tableView reloadData];
+    
+}
+
+- (NSIndexPath *)tableView :(UITableView *)theTableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+ 
+if(letUserSelectRow){
+    return indexPath;
+}else{
+    return nil;
+}
+
+}
+
+- (void) searchTableView :(UISearchBar *)searchBar{
+    //remove objects from orignialPerts
+    PertSearchAppDelegate *appDelegate = (PertSearchAppDelegate *)[[UIApplication sharedApplication] delegate];
+    [appDelegate.perts removeAllObjects];
+    
+    NSString *searchText = searchBar.text;
+    NSMutableArray *searchArray = [[NSMutableArray alloc] init];
+    
+    [searchArray addObjectsFromArray:appDelegate.originalPerts];
+    
+    for (Pert *p in searchArray) {
+        NSRange resultRange = [p.pert_id rangeOfString:searchText options:NSCaseInsensitiveSearch];
+        if (resultRange.length > 0) {
+          [appDelegate.perts addObject:p];
+        }
+    }
+}
+
+- (void) doneSearching_Clicked:(id)sender{
+}
 
 - (void)didReceiveMemoryWarning
 {

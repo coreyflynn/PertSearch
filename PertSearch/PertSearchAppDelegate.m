@@ -17,7 +17,7 @@
 
 @synthesize navigationController=_navigationController;
 
-@synthesize perts;
+@synthesize perts,originalPerts;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -124,6 +124,7 @@
     
     //init the perts array
     perts = [[NSMutableArray alloc] init];
+    originalPerts = [[NSMutableArray alloc] init];
     
     //open the database from the users filesystem
     if (sqlite3_open([databasePath UTF8String], &database) == SQLITE_OK) {
@@ -143,6 +144,7 @@
               
               //add the pert object to the perts array
               [perts addObject:pert];
+              [originalPerts addObject:pert];
               
             }
         }

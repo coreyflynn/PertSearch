@@ -11,6 +11,9 @@
 
 @interface RootViewController : UITableViewController {
     PertViewController *pertView;
+    NSMutableArray *filteredPerts;
+    BOOL searching;
+    BOOL letUserSelectRow;
 
 }
 
@@ -18,5 +21,7 @@
 
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar;
 - (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar;
+- (void) searchTableView:(UISearchBar *)searchBar;
+- (void) doneSearching_Clicked:(id)sender;
 
 @end
