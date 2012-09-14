@@ -11,7 +11,8 @@
 
 @implementation PertViewController
 
-@synthesize pertIdentifier, pertDescription,pertType,pertCells,pertPlates;
+@synthesize pertIdentifier, pertDescription, pertImage, pertType, pertCells, pertPlates;
+@synthesize pertCCLabel, pertSSLabel, pertCCProgress, pertSSProgress;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

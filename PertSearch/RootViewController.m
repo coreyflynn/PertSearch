@@ -18,7 +18,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.title = @"CMap Perturbagens";
+    PertSearchAppDelegate *appDelegate = (PertSearchAppDelegate *) [[UIApplication sharedApplication] delegate];
+    NSString *num_perts = [NSString stringWithFormat:@"%d ", appDelegate.perts.count];
+    self.title = [num_perts stringByAppendingString:@"Perturbagens"];
     
     //searching variables
     letUserSelectRow = YES;
@@ -157,16 +159,27 @@
     //set the pertIdentifier field
     [self.pertView.pertIdentifier setText:[pert pert_id]];
 
+    //set the pertImage image
+    [self.pertView.pertImage setImage:[pert type_image]];
+
     //set the pertDescription field
     [self.pertView.pertDescription setText:[pert pert_desc]];
 
-    //set the pertDescription field
+    //set the strength idicators
+    [self.pertView.pertSSLabel setText:@"2.0"];
+    [self.pertView.pertSSProgress setProgress:[@"2.0" floatValue]/20];
+    
+    //set the reliability idicators
+    [self.pertView.pertCCLabel setText:@"0.46"];
+    [self.pertView.pertCCProgress setProgress:([@"0.46" floatValue] + 1)/2];
+        
+    //set the pertType field
     [self.pertView.pertType setText:[pert pert_type]];
 
-    //set the pertDescription field
+    //set the pertCells field
     [self.pertView.pertCells setText:[pert pert_cells]];
 
-    //set the pertDescription field
+    //set the pertPlates field
     [self.pertView.pertPlates setText:[pert pert_plates]];
 
 }
@@ -209,6 +222,8 @@
        self.tableView.scrollEnabled = NO;
        [appDelegate.perts removeAllObjects];
        [appDelegate.perts addObjectsFromArray:appDelegate.originalPerts];
+       NSString *num_perts = [NSString stringWithFormat:@"%d ", appDelegate.perts.count];
+       self.title = [num_perts stringByAppendingString:@"Perturbagens"];
     }
     
     //reload the tableView data
@@ -243,6 +258,8 @@ if(letUserSelectRow){
           [appDelegate.perts addObject:p];
         }
     }
+    NSString *num_perts = [NSString stringWithFormat:@"%d ", appDelegate.perts.count];
+    self.title = [num_perts stringByAppendingString:@"Perturbagens"];
 }
 
 - (void) doneSearching_Clicked:(id)sender{

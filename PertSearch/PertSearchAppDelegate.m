@@ -130,11 +130,9 @@
     //open the database from the users filesystem
     if (sqlite3_open([databasePath UTF8String], &database) == SQLITE_OK) {
       //setup the sqlite statement and compile if for faster access
-      NSLog(@"opened db");
       const char *sqlStatment = "select pert_id,pert_desc,pert_type,pert_cells,pert_plates from pertdb";
       sqlite3_stmt *compiledStatement;
       if (sqlite3_prepare_v2(database, sqlStatment, -1, &compiledStatement, NULL) == SQLITE_OK) {
-          NSLog(@"prepared");
           //loop through the results and add them to the feeds array    
           while (sqlite3_step(compiledStatement) == SQLITE_ROW) {
               //read the data from the result row
