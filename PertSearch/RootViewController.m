@@ -83,13 +83,16 @@
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
+        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier] autorelease];
     }
 
     // Configure the cell.
     PertSearchAppDelegate *appDelegate = (PertSearchAppDelegate *) [[UIApplication sharedApplication] delegate];
     Pert *pert = (Pert *)[appDelegate.perts objectAtIndex:indexPath.row];
+    [cell.imageView setImage:pert.type_image];
     [cell.textLabel setText:pert.pert_id];
+    [cell.detailTextLabel setText:pert.pert_desc];
+
     return cell;
 }
 
@@ -150,10 +153,21 @@
     [self.navigationController pushViewController:self.pertView animated:YES];
     //set title of the view to the pert_id
     self.pertView.title = [pert pert_id];
+
     //set the pertIdentifier field
     [self.pertView.pertIdentifier setText:[pert pert_id]];
+
     //set the pertDescription field
     [self.pertView.pertDescription setText:[pert pert_desc]];
+
+    //set the pertDescription field
+    [self.pertView.pertType setText:[pert pert_type]];
+
+    //set the pertDescription field
+    [self.pertView.pertCells setText:[pert pert_cells]];
+
+    //set the pertDescription field
+    [self.pertView.pertPlates setText:[pert pert_plates]];
 
 }
 
@@ -223,8 +237,9 @@ if(letUserSelectRow){
     [searchArray addObjectsFromArray:appDelegate.originalPerts];
     
     for (Pert *p in searchArray) {
-        NSRange resultRange = [p.pert_id rangeOfString:searchText options:NSCaseInsensitiveSearch];
-        if (resultRange.length > 0) {
+        NSRange idResultRange = [p.pert_id rangeOfString:searchText options:NSCaseInsensitiveSearch];
+        NSRange descResultRange = [p.pert_desc rangeOfString:searchText options:NSCaseInsensitiveSearch];
+        if (idResultRange.length > 0 || descResultRange.length > 0) {
           [appDelegate.perts addObject:p];
         }
     }

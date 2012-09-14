@@ -10,11 +10,32 @@
 
 
 @implementation Pert
-@synthesize pert_id,pert_desc;
+@synthesize pert_id,pert_desc,pert_type,pert_cells,pert_plates,type_image;
 
--(id)initWithPertId:(NSString *)pid pert_desc:(NSString *)desc{
+
+-(id) initWithPertId:(NSString *)pid pert_desc:(NSString *)desc pert_type:(NSString *)type pert_cells:(NSString *)cells pert_plates:(NSString *)plates{
     self.pert_id = pid;
     self.pert_desc = desc;
+    self.pert_type = type;
+    self.pert_cells = cells;
+    self.pert_plates = plates;
+    
+    if ([self.pert_type isEqualToString:@"trt_cp"]) {
+        UIImage *cellImage = [UIImage imageNamed:@"CP.png"];
+        self.type_image =  cellImage;
+    }else if ([self.pert_type isEqualToString:@"trt_sh"]) {
+        UIImage *cellImage = [UIImage imageNamed:@"KD.png"];
+        self.type_image =  cellImage;
+    }else if ([self.pert_type isEqualToString:@"trt_oe"]) {
+        UIImage *cellImage = [UIImage imageNamed:@"OE.png"];
+        self.type_image =  cellImage;
+    }else if ([self.pert_type isEqualToString:@"ctl_vehicle"]) {
+        UIImage *cellImage = [UIImage imageNamed:@"CTL.png"];
+        self.type_image =  cellImage;
+    }else {
+        UIImage *cellImage = [UIImage imageNamed:@"Default.png"];
+        self.type_image =  cellImage;
+}
     
     return self;
 }

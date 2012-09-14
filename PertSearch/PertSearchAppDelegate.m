@@ -31,6 +31,7 @@
     NSArray *documentPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentsDir = [documentPaths objectAtIndex:0];
     databasePath = [documentsDir stringByAppendingPathComponent:databaseName];
+    NSLog(@"%@",databasePath);
     
     //build the database from the application bundle if required 
     [self checkAndCreateDatabase];
@@ -130,17 +131,21 @@
     if (sqlite3_open([databasePath UTF8String], &database) == SQLITE_OK) {
       //setup the sqlite statement and compile if for faster access
       NSLog(@"opened db");
-      const char *sqlStatment = "select * from pertdb";
+      const char *sqlStatment = "select pert_id,pert_desc,pert_type,pert_cells,pert_plates from pertdb";
       sqlite3_stmt *compiledStatement;
       if (sqlite3_prepare_v2(database, sqlStatment, -1, &compiledStatement, NULL) == SQLITE_OK) {
+          NSLog(@"prepared");
           //loop through the results and add them to the feeds array    
           while (sqlite3_step(compiledStatement) == SQLITE_ROW) {
               //read the data from the result row
-              NSString *aPertID = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 1)];
-              NSString *aPertDesc = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 2)];
+              NSString *aPertID = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 0)];
+              NSString *aPertDesc = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 1)];
+              NSString *aPertType = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 2)];
+              NSString *aPertCells = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 3)];
+              NSString *aPertPlates = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 4)];
               
               //creata a new Pert object for the row data
-              Pert *pert = [[Pert alloc] initWithPertId:aPertID pert_desc:aPertDesc];
+              Pert *pert = [[Pert alloc] initWithPertId:aPertID pert_desc:aPertDesc pert_type:aPertType pert_cells:aPertCells pert_plates:aPertPlates];
               
               //add the pert object to the perts array
               [perts addObject:pert];

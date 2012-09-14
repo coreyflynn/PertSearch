@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		482E699315FE9F140034C885 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 482E699215FE9F140034C885 /* Icon.png */; };
 		4831334A15FAA8D6001B8091 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4831334915FAA8D6001B8091 /* UIKit.framework */; };
 		4831334C15FAA8D6001B8091 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4831334B15FAA8D6001B8091 /* Foundation.framework */; };
 		4831334E15FAA8D6001B8091 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4831334D15FAA8D6001B8091 /* CoreGraphics.framework */; };
@@ -27,7 +28,17 @@
 		4831338B15FAAC09001B8091 /* PertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4831338915FAAC09001B8091 /* PertViewController.m */; };
 		4831338C15FAAC09001B8091 /* PertViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4831338A15FAAC09001B8091 /* PertViewController.xib */; };
 		4831338E15FAACA5001B8091 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4831338D15FAACA5001B8091 /* libsqlite3.dylib */; };
-		484DEC9715FACAF800CC61B9 /* PertDB.db in Resources */ = {isa = PBXBuildFile; fileRef = 484DEC9615FACAF800CC61B9 /* PertDB.db */; };
+		48FA0CFE16004CF0002141AA /* CTL.png in Resources */ = {isa = PBXBuildFile; fileRef = 48FA0CF816004CF0002141AA /* CTL.png */; };
+		48FA0CFF16004CF0002141AA /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 48FA0CF916004CF0002141AA /* Default.png */; };
+		48FA0D0216004CF0002141AA /* X.png in Resources */ = {isa = PBXBuildFile; fileRef = 48FA0CFC16004CF0002141AA /* X.png */; };
+		48FA0D0416004D7C002141AA /* PertDB.db in Resources */ = {isa = PBXBuildFile; fileRef = 48FA0D0316004D7C002141AA /* PertDB.db */; };
+		48FA0D0516004D7C002141AA /* PertDB.db in Resources */ = {isa = PBXBuildFile; fileRef = 48FA0D0316004D7C002141AA /* PertDB.db */; };
+		48FA0D0C1602C4F1002141AA /* CP.png in Resources */ = {isa = PBXBuildFile; fileRef = 48FA0D091602C4F1002141AA /* CP.png */; };
+		48FA0D0D1602C4F1002141AA /* CP.png in Resources */ = {isa = PBXBuildFile; fileRef = 48FA0D091602C4F1002141AA /* CP.png */; };
+		48FA0D0E1602C4F1002141AA /* KD.png in Resources */ = {isa = PBXBuildFile; fileRef = 48FA0D0A1602C4F1002141AA /* KD.png */; };
+		48FA0D0F1602C4F1002141AA /* KD.png in Resources */ = {isa = PBXBuildFile; fileRef = 48FA0D0A1602C4F1002141AA /* KD.png */; };
+		48FA0D101602C4F1002141AA /* OE.png in Resources */ = {isa = PBXBuildFile; fileRef = 48FA0D0B1602C4F1002141AA /* OE.png */; };
+		48FA0D111602C4F1002141AA /* OE.png in Resources */ = {isa = PBXBuildFile; fileRef = 48FA0D0B1602C4F1002141AA /* OE.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +52,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		482E699215FE9F140034C885 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		4831334515FAA8D6001B8091 /* PertSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PertSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4831334915FAA8D6001B8091 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		4831334B15FAA8D6001B8091 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -68,7 +80,13 @@
 		4831338915FAAC09001B8091 /* PertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PertViewController.m; sourceTree = "<group>"; };
 		4831338A15FAAC09001B8091 /* PertViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PertViewController.xib; sourceTree = "<group>"; };
 		4831338D15FAACA5001B8091 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
-		484DEC9615FACAF800CC61B9 /* PertDB.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = PertDB.db; sourceTree = "<group>"; };
+		48FA0CF816004CF0002141AA /* CTL.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CTL.png; sourceTree = "<group>"; };
+		48FA0CF916004CF0002141AA /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		48FA0CFC16004CF0002141AA /* X.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = X.png; sourceTree = "<group>"; };
+		48FA0D0316004D7C002141AA /* PertDB.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = PertDB.db; sourceTree = "<group>"; };
+		48FA0D091602C4F1002141AA /* CP.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CP.png; sourceTree = "<group>"; };
+		48FA0D0A1602C4F1002141AA /* KD.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = KD.png; sourceTree = "<group>"; };
+		48FA0D0B1602C4F1002141AA /* OE.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = OE.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,9 +163,16 @@
 		4831335015FAA8D6001B8091 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				484DEC9615FACAF800CC61B9 /* PertDB.db */,
 				4831335115FAA8D6001B8091 /* PertSearch-Info.plist */,
+				48FA0D0316004D7C002141AA /* PertDB.db */,
+				48FA0D091602C4F1002141AA /* CP.png */,
+				48FA0D0A1602C4F1002141AA /* KD.png */,
+				48FA0D0B1602C4F1002141AA /* OE.png */,
+				48FA0CF816004CF0002141AA /* CTL.png */,
+				48FA0CF916004CF0002141AA /* Default.png */,
+				48FA0CFC16004CF0002141AA /* X.png */,
 				4831335215FAA8D6001B8091 /* InfoPlist.strings */,
+				482E699215FE9F140034C885 /* Icon.png */,
 				4831335515FAA8D6001B8091 /* PertSearch-Prefix.pch */,
 				4831335615FAA8D6001B8091 /* main.m */,
 			);
@@ -230,6 +255,9 @@
 /* Begin PBXProject section */
 		4831333C15FAA8D6001B8091 /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+			};
 			buildConfigurationList = 4831333F15FAA8D6001B8091 /* Build configuration list for PBXProject "PertSearch" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
@@ -258,7 +286,14 @@
 				4831336315FAA8D6001B8091 /* RootViewController.xib in Resources */,
 				4831338315FAA8EF001B8091 /* PertSearchViewController.xib in Resources */,
 				4831338C15FAAC09001B8091 /* PertViewController.xib in Resources */,
-				484DEC9715FACAF800CC61B9 /* PertDB.db in Resources */,
+				482E699315FE9F140034C885 /* Icon.png in Resources */,
+				48FA0CFE16004CF0002141AA /* CTL.png in Resources */,
+				48FA0CFF16004CF0002141AA /* Default.png in Resources */,
+				48FA0D0216004CF0002141AA /* X.png in Resources */,
+				48FA0D0416004D7C002141AA /* PertDB.db in Resources */,
+				48FA0D0C1602C4F1002141AA /* CP.png in Resources */,
+				48FA0D0E1602C4F1002141AA /* KD.png in Resources */,
+				48FA0D101602C4F1002141AA /* OE.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,6 +303,10 @@
 			files = (
 				4831337415FAA8D6001B8091 /* InfoPlist.strings in Resources */,
 				4831337715FAA8D6001B8091 /* PertSearchTests.h in Resources */,
+				48FA0D0516004D7C002141AA /* PertDB.db in Resources */,
+				48FA0D0D1602C4F1002141AA /* CP.png in Resources */,
+				48FA0D0F1602C4F1002141AA /* KD.png in Resources */,
+				48FA0D111602C4F1002141AA /* OE.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -396,6 +435,7 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PertSearch/PertSearch-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "PertSearch/PertSearch-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -409,6 +449,7 @@
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PertSearch/PertSearch-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "PertSearch/PertSearch-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				VALIDATE_PRODUCT = YES;
@@ -427,6 +468,7 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PertSearchTests/PertSearchTests-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "PertSearchTests/PertSearchTests-Info.plist";
 				OTHER_LDFLAGS = (
 					"-framework",
@@ -449,6 +491,7 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PertSearchTests/PertSearchTests-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "PertSearchTests/PertSearchTests-Info.plist";
 				OTHER_LDFLAGS = (
 					"-framework",

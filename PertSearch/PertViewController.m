@@ -11,7 +11,7 @@
 
 @implementation PertViewController
 
-@synthesize pertIdentifier, pertDescription;
+@synthesize pertIdentifier, pertDescription,pertType,pertCells,pertPlates;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -40,12 +40,15 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    UIScrollView *tempScrollView=(UIScrollView *)self.view;
+    tempScrollView.contentSize=CGSizeMake(320,500);
     // Do any additional setup after loading the view from its nib.
 }
 
 - (void)viewDidUnload
 {
     [super viewDidUnload];
+    
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
 }
