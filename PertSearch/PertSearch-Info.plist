@@ -11,7 +11,25 @@
 	<key>CFBundleIconFiles</key>
 	<array>
 		<string>/Users/cflynn/Desktop/CMap3Dalpha.icns</string>
+		<string>Icon.png</string>
+		<string>CMap3D.png</string>
+		<string>Default.png</string>
+		<string>Default@2x.png</string>
 	</array>
+	<key>CFBundleIcons</key>
+	<dict>
+		<key>CFBundlePrimaryIcon</key>
+		<dict>
+			<key>CFBundleIconFiles</key>
+			<array>
+				<string>/Users/cflynn/Desktop/CMap3Dalpha.icns</string>
+				<string>Icon.png</string>
+				<string>CMap3D.png</string>
+				<string>Default.png</string>
+				<string>Default@2x.png</string>
+			</array>
+		</dict>
+	</dict>
 	<key>CFBundleIdentifier</key>
 	<string>Broad-Institute.${PRODUCT_NAME:rfc1034identifier}</string>
 	<key>CFBundleInfoDictionaryVersion</key>
