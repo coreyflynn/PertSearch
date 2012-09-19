@@ -130,7 +130,7 @@
     //open the database from the users filesystem
     if (sqlite3_open([databasePath UTF8String], &database) == SQLITE_OK) {
       //setup the sqlite statement and compile if for faster access
-      const char *sqlStatment = "select pert_id,pert_desc,pert_type,pert_cells,pert_plates from pertdb";
+      const char *sqlStatment = "select pert_id,pert_desc,pert_type,pert_cells,pert_plates,pert_ss,pert_cc from pertdb";
       sqlite3_stmt *compiledStatement;
       if (sqlite3_prepare_v2(database, sqlStatment, -1, &compiledStatement, NULL) == SQLITE_OK) {
           //loop through the results and add them to the feeds array    
@@ -141,9 +141,11 @@
               NSString *aPertType = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 2)];
               NSString *aPertCells = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 3)];
               NSString *aPertPlates = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 4)];
+              NSString *aPertSS = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 5)];
+              NSString *aPertCC = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 6)];
               
               //creata a new Pert object for the row data
-              Pert *pert = [[Pert alloc] initWithPertId:aPertID pert_desc:aPertDesc pert_type:aPertType pert_cells:aPertCells pert_plates:aPertPlates];
+              Pert *pert = [[Pert alloc] initWithPertId:aPertID pert_desc:aPertDesc pert_type:aPertType pert_cells:aPertCells pert_plates:aPertPlates pert_ss:aPertSS pert_cc:aPertCC];
               
               //add the pert object to the perts array
               [perts addObject:pert];

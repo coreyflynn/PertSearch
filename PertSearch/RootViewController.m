@@ -166,12 +166,12 @@
     [self.pertView.pertDescription setText:[pert pert_desc]];
 
     //set the strength idicators
-    [self.pertView.pertSSLabel setText:@"2.0"];
-    [self.pertView.pertSSProgress setProgress:[@"2.0" floatValue]/20];
+    [self.pertView.pertSSLabel setText:[NSString stringWithFormat:@"%.2f",[pert.pert_ss floatValue]]];
+    [self.pertView.pertSSProgress setProgress:[pert.pert_ss floatValue]/10];
     
     //set the reliability idicators
-    [self.pertView.pertCCLabel setText:@"0.46"];
-    [self.pertView.pertCCProgress setProgress:([@"0.46" floatValue] + 1)/2];
+    [self.pertView.pertCCLabel setText:[NSString stringWithFormat:@"%.2f",[pert.pert_cc floatValue]]];
+    [self.pertView.pertCCProgress setProgress:[pert.pert_cc floatValue]];
         
     //set the pertType field
     [self.pertView.pertType setText:[pert pert_type]];

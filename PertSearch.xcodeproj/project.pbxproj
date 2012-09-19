@@ -28,8 +28,6 @@
 		4831338B15FAAC09001B8091 /* PertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4831338915FAAC09001B8091 /* PertViewController.m */; };
 		4831338C15FAAC09001B8091 /* PertViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4831338A15FAAC09001B8091 /* PertViewController.xib */; };
 		4831338E15FAACA5001B8091 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4831338D15FAACA5001B8091 /* libsqlite3.dylib */; };
-		48FA0CFE16004CF0002141AA /* CTL.png in Resources */ = {isa = PBXBuildFile; fileRef = 48FA0CF816004CF0002141AA /* CTL.png */; };
-		48FA0CFF16004CF0002141AA /* Null.png in Resources */ = {isa = PBXBuildFile; fileRef = 48FA0CF916004CF0002141AA /* Null.png */; };
 		48FA0D0216004CF0002141AA /* X.png in Resources */ = {isa = PBXBuildFile; fileRef = 48FA0CFC16004CF0002141AA /* X.png */; };
 		48FA0D0C1602C4F1002141AA /* CP.png in Resources */ = {isa = PBXBuildFile; fileRef = 48FA0D091602C4F1002141AA /* CP.png */; };
 		48FA0D0D1602C4F1002141AA /* CP.png in Resources */ = {isa = PBXBuildFile; fileRef = 48FA0D091602C4F1002141AA /* CP.png */; };
@@ -43,6 +41,10 @@
 		48FA0D1E1602C947002141AA /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 48FA0D1D1602C947002141AA /* Default@2x.png */; };
 		48FA0D201602DFA6002141AA /* PertDB.db in Resources */ = {isa = PBXBuildFile; fileRef = 48FA0D1F1602DFA6002141AA /* PertDB.db */; };
 		48FA0D211602DFA6002141AA /* PertDB.db in Resources */ = {isa = PBXBuildFile; fileRef = 48FA0D1F1602DFA6002141AA /* PertDB.db */; };
+		48FA0D231602E1E2002141AA /* Null.png in Resources */ = {isa = PBXBuildFile; fileRef = 48FA0D221602E1E2002141AA /* Null.png */; };
+		48FA0D241602E1E2002141AA /* Null.png in Resources */ = {isa = PBXBuildFile; fileRef = 48FA0D221602E1E2002141AA /* Null.png */; };
+		48FA0D291602EAC6002141AA /* CTL.png in Resources */ = {isa = PBXBuildFile; fileRef = 48FA0D281602EAC6002141AA /* CTL.png */; };
+		48FA0D2A1602EAC6002141AA /* CTL.png in Resources */ = {isa = PBXBuildFile; fileRef = 48FA0D281602EAC6002141AA /* CTL.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,8 +86,6 @@
 		4831338915FAAC09001B8091 /* PertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PertViewController.m; sourceTree = "<group>"; };
 		4831338A15FAAC09001B8091 /* PertViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PertViewController.xib; sourceTree = "<group>"; };
 		4831338D15FAACA5001B8091 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
-		48FA0CF816004CF0002141AA /* CTL.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CTL.png; sourceTree = "<group>"; };
-		48FA0CF916004CF0002141AA /* Null.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Null.png; sourceTree = "<group>"; };
 		48FA0CFC16004CF0002141AA /* X.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = X.png; sourceTree = "<group>"; };
 		48FA0D091602C4F1002141AA /* CP.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CP.png; sourceTree = "<group>"; };
 		48FA0D0A1602C4F1002141AA /* KD.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = KD.png; sourceTree = "<group>"; };
@@ -95,6 +95,8 @@
 		48FA0D1B1602C925002141AA /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		48FA0D1D1602C947002141AA /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		48FA0D1F1602DFA6002141AA /* PertDB.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = PertDB.db; sourceTree = "<group>"; };
+		48FA0D221602E1E2002141AA /* Null.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Null.png; sourceTree = "<group>"; };
+		48FA0D281602EAC6002141AA /* CTL.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CTL.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,11 +179,11 @@
 			children = (
 				4831335115FAA8D6001B8091 /* PertSearch-Info.plist */,
 				48FA0D1F1602DFA6002141AA /* PertDB.db */,
+				48FA0D281602EAC6002141AA /* CTL.png */,
+				48FA0D221602E1E2002141AA /* Null.png */,
 				48FA0D091602C4F1002141AA /* CP.png */,
 				48FA0D0A1602C4F1002141AA /* KD.png */,
 				48FA0D0B1602C4F1002141AA /* OE.png */,
-				48FA0CF816004CF0002141AA /* CTL.png */,
-				48FA0CF916004CF0002141AA /* Null.png */,
 				48FA0CFC16004CF0002141AA /* X.png */,
 				4831335215FAA8D6001B8091 /* InfoPlist.strings */,
 				482E699215FE9F140034C885 /* Icon.png */,
@@ -299,8 +301,6 @@
 				4831338315FAA8EF001B8091 /* PertSearchViewController.xib in Resources */,
 				4831338C15FAAC09001B8091 /* PertViewController.xib in Resources */,
 				482E699315FE9F140034C885 /* Icon.png in Resources */,
-				48FA0CFE16004CF0002141AA /* CTL.png in Resources */,
-				48FA0CFF16004CF0002141AA /* Null.png in Resources */,
 				48FA0D0216004CF0002141AA /* X.png in Resources */,
 				48FA0D0C1602C4F1002141AA /* CP.png in Resources */,
 				48FA0D0E1602C4F1002141AA /* KD.png in Resources */,
@@ -310,6 +310,8 @@
 				48FA0D1C1602C925002141AA /* Default.png in Resources */,
 				48FA0D1E1602C947002141AA /* Default@2x.png in Resources */,
 				48FA0D201602DFA6002141AA /* PertDB.db in Resources */,
+				48FA0D231602E1E2002141AA /* Null.png in Resources */,
+				48FA0D291602EAC6002141AA /* CTL.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -323,6 +325,8 @@
 				48FA0D0F1602C4F1002141AA /* KD.png in Resources */,
 				48FA0D111602C4F1002141AA /* OE.png in Resources */,
 				48FA0D211602DFA6002141AA /* PertDB.db in Resources */,
+				48FA0D241602E1E2002141AA /* Null.png in Resources */,
+				48FA0D2A1602EAC6002141AA /* CTL.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
