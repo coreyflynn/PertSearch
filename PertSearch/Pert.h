@@ -18,6 +18,7 @@
     NSString *pert_ss;
     NSString *pert_cc;
     UIImage *type_image;
+    NSMutableArray *cell_array;
     
 }
 
@@ -29,6 +30,7 @@
 @property (nonatomic, retain) NSString *pert_ss;
 @property (nonatomic, retain) NSString *pert_cc;
 @property (nonatomic, retain) UIImage *type_image;
+@property (nonatomic, retain) NSMutableArray *cell_array;
 
 -(id) initWithPertId:(NSString *)pid pert_desc:(NSString *)desc pert_type:(NSString *)type pert_cells:(NSString *)cells pert_plates:(NSString *)plates pert_ss:(NSString *)ss pert_cc:(NSString *)cc;
 

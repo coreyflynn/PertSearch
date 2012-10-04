@@ -20,6 +20,8 @@
     IBOutlet UILabel *pertCCLabel;
     IBOutlet UIProgressView *pertSSProgress;
     IBOutlet UIProgressView *pertCCProgress;
+    IBOutlet UITableView *cellTable;
+    NSArray *cell_array;
     
 }
 
@@ -33,5 +35,7 @@
 @property (nonatomic, retain) IBOutlet UILabel *pertCCLabel;
 @property (nonatomic, retain) IBOutlet UIProgressView *pertSSProgress;
 @property (nonatomic, retain) IBOutlet UIProgressView *pertCCProgress;
+@property (nonatomic, retain) IBOutlet UITableView *cellTable;
+@property (nonatomic, retain) NSArray *cell_array;
 
 @end

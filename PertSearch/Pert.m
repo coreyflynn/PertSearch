@@ -10,7 +10,7 @@
 
 
 @implementation Pert
-@synthesize pert_id,pert_desc,pert_type,pert_cells,pert_plates,type_image,pert_ss,pert_cc;
+@synthesize pert_id,pert_desc,pert_type,pert_cells,pert_plates,type_image,pert_ss,pert_cc,cell_array;
 
 
 -(id) initWithPertId:(NSString *)pid pert_desc:(NSString *)desc pert_type:(NSString *)type pert_cells:(NSString *)cells pert_plates:(NSString *)plates pert_ss:(NSString *)ss pert_cc:(NSString *)cc{

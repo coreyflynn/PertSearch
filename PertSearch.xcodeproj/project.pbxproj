@@ -28,6 +28,8 @@
 		4831338B15FAAC09001B8091 /* PertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4831338915FAAC09001B8091 /* PertViewController.m */; };
 		4831338C15FAAC09001B8091 /* PertViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4831338A15FAAC09001B8091 /* PertViewController.xib */; };
 		4831338E15FAACA5001B8091 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4831338D15FAACA5001B8091 /* libsqlite3.dylib */; };
+		486E7218161D2DD100BEF1AC /* SCCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 486E7217161D2DD100BEF1AC /* SCCell.xib */; };
+		486E721C161D2F7D00BEF1AC /* SCCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 486E721B161D2F7D00BEF1AC /* SCCell.m */; };
 		48FA0D0216004CF0002141AA /* X.png in Resources */ = {isa = PBXBuildFile; fileRef = 48FA0CFC16004CF0002141AA /* X.png */; };
 		48FA0D0C1602C4F1002141AA /* CP.png in Resources */ = {isa = PBXBuildFile; fileRef = 48FA0D091602C4F1002141AA /* CP.png */; };
 		48FA0D0D1602C4F1002141AA /* CP.png in Resources */ = {isa = PBXBuildFile; fileRef = 48FA0D091602C4F1002141AA /* CP.png */; };
@@ -86,6 +88,9 @@
 		4831338915FAAC09001B8091 /* PertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PertViewController.m; sourceTree = "<group>"; };
 		4831338A15FAAC09001B8091 /* PertViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PertViewController.xib; sourceTree = "<group>"; };
 		4831338D15FAACA5001B8091 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		486E7217161D2DD100BEF1AC /* SCCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SCCell.xib; sourceTree = "<group>"; };
+		486E721A161D2F7C00BEF1AC /* SCCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCCell.h; sourceTree = "<group>"; };
+		486E721B161D2F7D00BEF1AC /* SCCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCCell.m; sourceTree = "<group>"; };
 		48FA0CFC16004CF0002141AA /* X.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = X.png; sourceTree = "<group>"; };
 		48FA0D091602C4F1002141AA /* CP.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CP.png; sourceTree = "<group>"; };
 		48FA0D0A1602C4F1002141AA /* KD.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = KD.png; sourceTree = "<group>"; };
@@ -221,6 +226,9 @@
 				4831338815FAAC09001B8091 /* PertViewController.h */,
 				4831338915FAAC09001B8091 /* PertViewController.m */,
 				4831338A15FAAC09001B8091 /* PertViewController.xib */,
+				486E7217161D2DD100BEF1AC /* SCCell.xib */,
+				486E721A161D2F7C00BEF1AC /* SCCell.h */,
+				486E721B161D2F7D00BEF1AC /* SCCell.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -312,6 +320,7 @@
 				48FA0D201602DFA6002141AA /* PertDB.db in Resources */,
 				48FA0D231602E1E2002141AA /* Null.png in Resources */,
 				48FA0D291602EAC6002141AA /* CTL.png in Resources */,
+				486E7218161D2DD100BEF1AC /* SCCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,6 +367,7 @@
 				4831336015FAA8D6001B8091 /* RootViewController.m in Sources */,
 				4831338715FAAB91001B8091 /* Pert.m in Sources */,
 				4831338B15FAAC09001B8091 /* PertViewController.m in Sources */,
+				486E721C161D2F7D00BEF1AC /* SCCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

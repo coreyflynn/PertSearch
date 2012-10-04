@@ -155,6 +155,11 @@
     [self.navigationController pushViewController:self.pertView animated:YES];
     //set title of the view to the pert_id
     self.pertView.title = [pert pert_id];
+    
+    //set the pert array for the pertView
+    
+    NSArray *cell_array = [pert.pert_cells componentsSeparatedByString:@","];
+    self.pertView.cell_array = [[NSArray alloc] initWithArray:cell_array];
 
     //set the pertIdentifier field
     [self.pertView.pertIdentifier setText:[pert pert_id]];
